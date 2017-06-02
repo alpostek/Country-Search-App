@@ -1,0 +1,142 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*reset CSS*/
+
+/*general rules*/
+ $mainGrey: #d2d2d2;
+
+
+
+.head{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  p{
+    padding: 5px;
+  }
+}
+
+header{
+  border-bottom: 3px solid $mainGrey;
+}
+
+.container{
+  max-width: 1100px;
+  width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+
+.appform{
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("img/map.png");
+  background-size: 100% 100%;
+
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  margin:20px;
+  label{
+    margin: 10px;
+  }
+  input{
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+  }
+  button{
+    margin-left: 5px;
+    background-color: $mainGrey;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    font-size: 15px;
+  }
+}
+
+.tableinfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	height: 75%;
+}
+
+.tablecountry{
+  table{
+      border-collapse: collapse;
+    }
+    &thead, th, td, tr{
+      padding: 8px;
+      border: 3px solid $mainGrey;
+    }
+}
+
+.hide{
+	display: none;
+}
+
+.flag{
+  margin: 10px;
+  background-size: 100% 100%;
+  width: 30%;
+	height: 20%;
+}
+
+.wikiinfo{
+  margin: 5px;
+	width: 100%;
+}
+
+footer{
+  border-top: 3px solid $mainGrey;
+}
+
+.foot{
+  display: flex;
+  justify-content: flex-end;
+}

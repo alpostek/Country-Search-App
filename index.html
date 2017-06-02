@@ -1,0 +1,90 @@
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vievport" content="width: device-width, initial-scale=1"></meta>
+    <title>Get info about the country</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="js/libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <script src="js/libs/jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="js/libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <!-- <script src="js/libs/jquery-3.2.1.min.js"></script> -->
+    <script src ="js/out.js"></script>
+  </head>
+  <!--HTML5 shiv and Respond.js IE8 support of HTLM5 elements and media queries-->
+  <!--[if lt IE 9]> <script src = "https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script> <script src = "https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]></script>-->
+  <body>
+
+    <header>
+        <section class="container">
+          <div class="head">
+            <p>Welcome to Country Search App! Find basic info about any country</p>
+            </div>
+        </section>
+    </header>
+
+    <section class="appform">
+        <div class="container">
+            <form class="form">
+                <label>Type the name of the country: </label><input id = "inpt" type="text"></input><button id="btn">Submit</button>
+            </form>
+        </div>
+
+
+
+      <div class="container tableinfo">
+        <div>
+        <table class="tablecountry">
+            <thead>
+                <tr>
+                    <th class="clear" colspan="2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Capital</td>
+                    <td class="clear"></td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td class="clear"></td>
+                </tr>
+                <tr>
+                    <td>Region</td>
+                    <td class="clear"></td>
+                </tr>
+                <tr>
+                    <td>Subregion</td>
+                    <td class="clear"></td>
+                </tr>
+                <tr>
+                    <td>Domain</td>
+                    <td class="clear"></td>
+                </tr>
+                <tr>
+                  <td>Population</td>
+                  <td class="clear"></td>
+                </tr>
+                <tr>
+                    <td>Currency</td>
+                    <td class="clear"></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="flag">
+        </div>
+        <div class="wikiinfo clear">
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container foot">
+            <p>Based on restcountries.eu and Wikipedia.</p>
+        </div>
+    </footer>
+
+
+
+  </body>
+  </html>
