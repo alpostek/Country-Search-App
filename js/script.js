@@ -1,31 +1,60 @@
 import "../sass/style.scss"
 
+
 $(function(){
 
   var button = $("#btn");
 
-  //  $("#inpt").autocomplete({
-  //    source: function (request, response){
-  //      $.ajax({
-  //        url: "https://restcountries.eu/rest/v2/all?fields=name",
-  //        dataType: "json",
-  //         data: {
-  //           term: request.name
-  //         },
-  //         success: function(data){
-  //           response(data);
-  //      }
-  //      })
-  //    },
-  //    minLength: 2,
-  //   //  select: function(event, ui)
-  //  })
+
+// var countriesVal = {
+//   url: function (phrase) {
+//     if (phrase !== ""){
+//       return "https://restcountries.eu/rest/v2/name/" + phrase
+//     }
+//   },
+//
+//   ajaxSettings: {
+//     dataType: "json",
+//   },
+//
+//   getValue: "name",
+//
+//   list:{
+//     match: {
+//       enabled: true
+//     }
+//   }
+// }
+//
+//   $("#inpt").easyAutocomplete(countriesVal);
+
+
+
+
+$("#inpt").autocomplete({
+  source: function(request, response){
+    $.ajax({
+      url: "https://restcountries.eu/rest/v2/name/" + request.term,
+      type: "GET",
+      success: function(data){
+      response ($.map(data, function(item){
+        return item.name;
+      }))
+    }
+  })
+},
+minLength: 2,
+select: function(event, ui){
+},
+appendTo: $(".ui-widget")
+
+})
 
 
 
 function loadData(){
   var country = $("#inpt").val();
-  var countriesUrl = `https://restcountries.eu/rest/v2/name/${country}`
+
   var toClear = $(".clear");
 
   toClear.text("");
@@ -33,7 +62,8 @@ function loadData(){
   $("table").removeClass("hide");
   $(".tableinfo").css("height", "auto");
 
-  // if (country => 3){
+
+  var countriesUrl = `https://restcountries.eu/rest/v2/name/${country}`
 
   $.ajax({
     url: countriesUrl,
@@ -71,9 +101,8 @@ function loadData(){
   }).fail(function(){
         $(".tablecountry").find("th:first-child").append(`<p>Request to Wikipedia failed</p>`)
       });
-}
 
-// } else if((country < 3) || )
+}
 
 button.on("click", function(event){
   event.preventDefault();
