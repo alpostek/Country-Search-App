@@ -46,6 +46,8 @@ $("#inpt").autocomplete({
 minLength: 2,
 select: function(event, ui){
 },
+
+
 appendTo: $(".ui-widget")
 
 })
@@ -54,6 +56,7 @@ appendTo: $(".ui-widget")
 
 function loadData(){
   var country = $("#inpt").val();
+  var countryWiki = country.replace(/ /g, "_");
 
   var toClear = $(".clear");
 
@@ -61,6 +64,7 @@ function loadData(){
   $(".flag").css("background-image", "none");
   $("table").removeClass("hide");
   $(".tableinfo").css("height", "auto");
+  // $(".tableinfo").addClass(".tableinfo_height");
 
 
   var countriesUrl = `https://restcountries.eu/rest/v2/name/${country}`
@@ -82,16 +86,20 @@ function loadData(){
       $(".flag").css("background-image", "url(" + `${element.flag}` + ")");
     })
   }).fail(function(){
-    $(".tablecountry").find("th:first-child").append(`<p>Request failed</p>`)
+    // $(".tablecountry").find("th:first-child").append(`<p>Request failed</p>`)
+    $(".fail").append("<p>Request failed</p>");
+    $("table").addClass("hide");
+    $(".tableinfo").css("height", "75%");
   })
 
-  var wikiUrl = "https://wikipedia.org/w/api.php?action=query&prop=extracts&exsentences=4&format=json&titles=" + country + "&indexpageids=";
+  var wikiUrl = "https://wikipedia.org/w/api.php?action=query&prop=extracts&exintro&exsentences=4&exlimit=5&format=json&titles=" + countryWiki + "&indexpageids=";
 
   $.ajax({
     url: wikiUrl,
     dataType: "jsonp",
     type: 'GET'
   }).done(function(wikiData){
+    console.log(wikiData)
     $.each(wikiData, function(index, wikiElement){
       var wikiPage = wikiElement.pages;
       $.each(wikiPage, function(index, element){

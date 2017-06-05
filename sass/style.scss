@@ -74,7 +74,9 @@ header{
 .appform{
 	margin-top: 0;
   background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("img/map.png");
-  background-size: 100% 100%;
+  // background-size: 100% 100%;
+	background-size: cover;
+	background-position: center;
 
 }
 
@@ -106,6 +108,10 @@ header{
   flex-direction: column;
   align-items: center;
 	height: 75%;
+}
+
+.tableinfo_height{
+	height: auto;
 }
 
 .tablecountry{
@@ -143,20 +149,50 @@ footer{
   justify-content: flex-end;
 }
 
-// .ui-menu{
-// 	z-index: 9999 !important;
-// }
-//
-// .easy-autocomplete-container ul{
-// 	z-index: 9999 !important;
-// }
-
 .ui-menu{
 	position: absolute;
 	background-color: white;
-	// z-index: 9999 !important;
 }
 
-// .ui-widget{
-// 	overflow: auto;
-// }
+.ui-menu li{
+	cursor: pointer;
+	text-wrap: nowrap;
+}
+
+.ui-menu li:hover{
+	background-color: $mainGrey;
+}
+
+.ui-helper-hidden-accessible {
+	position: absolute; left:-999em;
+}
+
+//media queries//
+@media (max-width:820px) {
+	.form{
+		flex-direction: column;
+		justify-content: center;
+		margin-top: 30%;
+		flex-wrap: wrap;
+		input{
+			width: 50%;
+		}
+		button{
+			width: 50%;
+		}
+		label{
+			flex-grow: 3;
+		}
+	}
+	.ui-widget{
+		display: flex;
+		justify-content: center;
+	}
+	.queryhelper{
+		display: flex;
+		flex-direction: row;
+	}
+	.ui-menu{
+		display: inline-block;
+	}
+}
