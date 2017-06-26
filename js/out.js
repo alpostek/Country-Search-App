@@ -76,7 +76,7 @@
 var content = __webpack_require__(4);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(8)(content, {});
+var update = __webpack_require__(9)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -360,8 +360,8 @@ function fromByteArray (uint8) {
 
 
 var base64 = __webpack_require__(2)
-var ieee754 = __webpack_require__(6)
-var isArray = __webpack_require__(7)
+var ieee754 = __webpack_require__(7)
+var isArray = __webpack_require__(8)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -2150,7 +2150,7 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, "html, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n  box-sizing: border-box; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/*reset CSS*/\n/*general rules*/\n.head {\n  display: flex;\n  justify-content: center;\n  margin: 5px; }\n  .head p {\n    padding: 5px; }\n\nheader {\n  border-bottom: 3px solid #d2d2d2; }\n\n.container {\n  max-width: 1100px;\n  width: 100%;\n  margin: 0 auto;\n  overflow: hidden;\n  font-family: \"Roboto\", sans-serif; }\n\n.appform {\n  margin-top: 0;\n  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(" + __webpack_require__(9) + ");\n  background-size: cover;\n  background-position: center; }\n\n.form {\n  display: flex;\n  justify-content: center;\n  margin: 20px;\n  z-index: 1; }\n  .form label {\n    margin: 10px; }\n  .form input {\n    margin-left: 5px;\n    margin-right: 5px;\n    border-radius: 5px; }\n  .form button {\n    margin-left: 5px;\n    background-color: #d2d2d2;\n    border-radius: 5px;\n    padding: 5px;\n    border: none;\n    font-size: 15px; }\n\n.tableinfo {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  height: 75%; }\n\n.tableinfo_height {\n  height: auto; }\n\n.tablecountry table {\n  border-collapse: collapse; }\n\n.tablecountrythead, .tablecountry th, .tablecountry td, .tablecountry tr {\n  padding: 8px;\n  border: 3px solid #d2d2d2; }\n\n.hide {\n  display: none; }\n\n.flag {\n  margin: 10px;\n  background-size: 100% 100%;\n  width: 30%;\n  height: 20%; }\n\n.wikiinfo {\n  margin: 5px;\n  width: 100%; }\n\nfooter {\n  border-top: 3px solid #d2d2d2; }\n\n.foot {\n  display: flex;\n  justify-content: flex-end; }\n\n.ui-menu {\n  position: absolute;\n  background-color: white; }\n\n.ui-menu li {\n  cursor: pointer;\n  text-wrap: nowrap; }\n\n.ui-menu li:hover {\n  background-color: #d2d2d2; }\n\n.ui-helper-hidden-accessible {\n  position: absolute;\n  left: -999em; }\n\n@media (max-width: 820px) {\n  .form {\n    flex-direction: column;\n    justify-content: center;\n    margin-top: 30%;\n    flex-wrap: wrap; }\n    .form input {\n      width: 50%; }\n    .form button {\n      width: 50%; }\n    .form label {\n      flex-grow: 3; }\n  .ui-widget {\n    display: flex;\n    justify-content: center; }\n  .queryhelper {\n    display: flex;\n    flex-direction: row; }\n  .ui-menu {\n    display: inline-block; } }\n", ""]);
+exports.push([module.i, "html, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n  box-sizing: border-box; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\n/*reset CSS*/\n/*general rules*/\n.head {\n  display: flex;\n  justify-content: center;\n  margin: 5px; }\n  .head p {\n    padding: 5px; }\n\nheader {\n  border-bottom: 3px solid #d2d2d2; }\n\n.container {\n  max-width: 1100px;\n  width: 100%;\n  margin: 0 auto;\n  overflow: hidden;\n  font-family: \"Roboto\", sans-serif; }\n\n.appform {\n  margin-top: 0;\n  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(" + __webpack_require__(6) + ");\n  background-size: cover;\n  background-position: center; }\n\n.form {\n  display: flex;\n  justify-content: center;\n  margin: 20px;\n  z-index: 1; }\n  .form label {\n    margin: 10px; }\n  .form input {\n    margin-left: 5px;\n    margin-right: 5px;\n    border-radius: 5px; }\n  .form button {\n    margin-left: 5px;\n    background-color: #d2d2d2;\n    border-radius: 5px;\n    padding: 5px;\n    border: none;\n    font-size: 15px; }\n\n.tableinfo {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  height: 75%; }\n\n.tableinfo_height {\n  height: auto; }\n\n.tablecountry table {\n  border-collapse: collapse; }\n\n.tablecountrythead, .tablecountry th, .tablecountry td, .tablecountry tr {\n  padding: 8px;\n  border: 3px solid #d2d2d2; }\n\n.hide {\n  display: none; }\n\n.flag {\n  margin: 10px;\n  background-size: 100% 100%;\n  width: 30%;\n  height: 20%; }\n\n.wikiinfo {\n  margin: 5px;\n  width: 100%; }\n\nfooter {\n  border-top: 3px solid #d2d2d2; }\n\n.foot {\n  display: flex;\n  justify-content: flex-end; }\n\n.ui-menu {\n  position: absolute;\n  background-color: white; }\n\n.ui-menu li {\n  cursor: pointer;\n  text-wrap: nowrap; }\n\n.ui-menu li:hover {\n  background-color: #d2d2d2; }\n\n.ui-helper-hidden-accessible {\n  position: absolute;\n  left: -999em; }\n\n@media (max-width: 820px) {\n  .form {\n    flex-direction: column;\n    justify-content: center;\n    margin-top: 30%;\n    flex-wrap: wrap; }\n    .form input {\n      width: 50%; }\n    .form button {\n      width: 50%; }\n    .form label {\n      flex-grow: 3; }\n  .ui-widget {\n    display: flex;\n    justify-content: center; }\n  .queryhelper {\n    display: flex;\n    flex-direction: row; }\n  .ui-menu {\n    display: inline-block; } }\n", ""]);
 
 // exports
 
@@ -2239,6 +2239,12 @@ function toComment(sourceMap) {
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "./sass/img/map.png";
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -2328,7 +2334,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -2339,7 +2345,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 /*
@@ -2589,12 +2595,6 @@ function updateLink(linkElement, obj) {
 		URL.revokeObjectURL(oldSrc);
 }
 
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "ee0cab1dbbcc315fcc1513611671847b.png";
 
 /***/ }),
 /* 10 */

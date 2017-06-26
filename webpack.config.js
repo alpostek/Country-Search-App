@@ -17,8 +17,12 @@ module.exports = {
                 loaders: ["style-loader", "css-loader", "sass-loader?sourceMap"]
             },
             {
-                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                test: /\.(woff|woff2|eot|ttf)$/,
                 loader: 'url-loader?limit=100000'
+            },
+            {
+              test: /\.(jpg|png|svg)$/,
+              loader: 'file-loader?name=./sass/img/[name].[ext]'
             }
 
 
